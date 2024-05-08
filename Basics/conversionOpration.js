@@ -5,7 +5,7 @@
 //let score = null; // assign a new value to the existing 'score' variable with null => 0
 
 //let score = undefined; // assign a new value to the existing 'score' variable with undefined => NaN
-/*
+
 
 let score = true; // assign a new value to the existing 'score' variable with boolean true => 1 , FALSE => 0
 
@@ -28,7 +28,7 @@ let stringNumber = "100"; // this value is string => "100"
 console.log(typeof (stringNumber)) // this value is in string format but i want to convert it into number format
 console.log(stringNumber); // it will display 100 because the value is in number format 
 
-*/
+
 
 
 
