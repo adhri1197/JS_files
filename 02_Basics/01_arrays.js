@@ -38,7 +38,7 @@ const vegetables = ['Carrot', 'Potato', 'Tomato', 'Onion', 'Garlic'];
 //const bothconst = fruits.concat(vegetables); // fruits.concat(vegetables); (mix both arrays)
 //console.log(bothconst);
 
-const allItems = [...fruits, ...vegetables]; // fruits.concat(vegetables); (mix both arrays)
+const allItems = [...fruits, ...vegetables]; // fruits.concat(vegetables); (mix both arrays) // SPRED OPERATOR
 console.log(allItems);
 
 const allItems2 = [...fruits, 'Watermelon', ...vegetables]; // fruits.concat(vegetables); (mix both arrays)
