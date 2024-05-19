@@ -14,7 +14,7 @@ console.log(b); // its not gonna print 20 because of the block scope
 
 
 // neasted  scope
-
+ 
 function one(){
     const username = "Anirudh";
 
