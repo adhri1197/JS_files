@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code with Adhri</title>
+</head>
+<body style="background-color: rgba(24, 23, 23, 0.993); color: rgb(215, 231, 245);">
+
+    <ul class = 'language'>
+        <li>HTML</li>
+        <li>CSS</li>
+        
+    </ul>
+    
+</body>
+<script>
+// using a method to add a new language to the list but its not the best way to do it becuse it traverses the DOM
+// traverses is the process of navigating through the DOM tree to find an element or a node in the DOM tree 
+    function addLanguage(langName) {
+    const li = document.createElement('li');
+    li.innerHTML =  `${langName}`
+    document.querySelector('.language').appendChild(li);
+
+    }
+    addLanguage('C++');
+    addLanguage('C#');
+// using a better method to add a new language to the list becuse it does not traverse the DOM
+    function addOpLanguage(langName) {
+    const li = document.createElement('li');
+    li.appendChild(document.createTextNode(langName));
+    document.querySelector('.language').appendChild(li);
+        
+    }
+    addOpLanguage('Python');
+
+    //Edit  
+    const secondLang = document.querySelector("li:nth-child(2)");
+    console.log(secondLang);
+    const newLi = document.createElement('li');
+    newLi.textContent = 'JavaScript';
+    secondLang.replaceWith(newLi);
+     // Another way to do the same thing
+    //edit
+    const firstLang = document.querySelector("li:first-child");
+    console.log(firstLang);
+    firstLang.outerHTML = '<li>Java</li>';
+
+    //Remove 
+    const lastLang = document.querySelector("li:last-child");
+    console.log(lastLang);
+    lastLang.remove();
+
+
+    //Clone
+    const clonedLang = document.querySelector("li:nth-child(2)").cloneNode(true);
+    document.querySelector('.language').appendChild(clonedLang);
+    console.log(clonedLang);
+
+
+</script>
+    
+</html>

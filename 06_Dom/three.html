@@ -9,18 +9,19 @@
     
 </body >
 <script> 
-const div = document.createElement('div');
+const div = document.createElement('div'); // create a div element
 console.log(div);
-div.className = 'main';
-div.id = Math.round(Math.random() * 10 + 1)
+div.className = 'main';// add a class name to the div element
+div.id = Math.round(Math.random() * 10 + 1)// add an id to the div element 
 
-div.setAttribute('title', 'This is a div element');
-div.style.color = 'red';
+div.setAttribute('title', 'This is a div element'); // add a title attribute to the div element
+div.style.color = 'red'; 
 div.style.backgroundColor = 'black';
 div.style.padding = '10px';
-const addText = document.createTextNode('This is a text node');
-div.appendChild(addText);
-document.body.appendChild(div);
+const addText = document.createTextNode('This is a text node');// create a text node 
+div.appendChild(addText); // append the text node to the div element appendChild() method is used to
+// append a node as the last child of a node
+document.body.appendChild(div); // append the div element to the body of the document
 console.log(div);
 </script>
    
