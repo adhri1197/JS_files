@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body style="background-color: rgb(39, 38, 38);color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    //attachEvent() IE 8 and earlier versions - attachEvent() method its not supported in modern browsers
+    //jQuery - on() method - jQuery is a library that makes it easy to work with the DOM its not supported in modern browsers
+
+     // type - click ,  // timeStap - when the event was created , //defualtPrevented - false , //target - the element that triggered the event, 
+    // target - the element that triggered the event, //toELEMENT - the element that the mouse pointer is moving to, //fromElement - the element that the mouse pointer is moving from
+    //srcElement - the element that triggered the event, //currentTarget - the element that the event listener is attached to, //clientX - the horizontal coordinate of the mouse pointer when the event was triggered
+    // clientY - the vertical coordinate of the mouse pointer when the event was triggered, //screenX - the horizontal coordinate of the mouse pointer when the event was triggered  
+    //screenY - the vertical coordinate of the mouse pointer when the event was triggered, //altKey - returns true if the "ALT" key was pressed when the event was triggered
+    //ctrlKey - returns true if the "CTRL" key was pressed when the event was triggered, //shiftKey - returns true if the "SHIFT" key was pressed when the event was triggered
+    //keyCode - returns the Unicode character code of the key that triggered the onkeypress event, //button - returns which mouse button was pressed when the event was triggered
+
+
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked insde the ul tag");
+    },false );  // false - event bubbling is method of event propagation in the HTML DOM API when an event occurs in an element inside another element, and both elements have registered a handle for that event 
+                //, true - event capturing is method of event propagation in the HTML DOM API when an event occurs in an element inside another element, and both elements have registered a handle for that event
+    
+    document.getElementById('photoshop').addEventListener('click', function(e){
+        console.log("clicked on photoshop image");
+        e.stopPropagation(); // stops the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event
+    },false );
+
+    document.getElementById('google').addEventListener('click', function(e){
+        console.log("clicked on google link");
+        e.preventDefault();// stops the default action of an element from happening
+        e.stopPropagation(); // stops the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event
+        
+    },false );
+
+    /********************************BASIC IS COMPLITE************************** */
+
+      
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if (e.target.tagName === 'IMG') {
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+            e.stopPropagation();
+        }
+    });
+</script>
+</html>
