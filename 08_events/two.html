@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code by adhri</title>
+</head>
+<body style="background-color: rgb(92, 89, 89);">
+    <h1>Frist Event</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    
+    const sayCommand = function() {
+        console.log("Hello World");
+    }
+    const changeText = function() {
+        document.querySelector('h1').
+        textContent = "Code with adhri"; // we use textContent but we also use innerHTML or innerText
+    }
+    //document.querySelector('button').addEventListener('click', sayCommand); // use button to console.log "Hello World"
+    
+
+    const changeMe = setTimeout(changeText, 3000); 
+
+    document.querySelector("#stop").addEventListener('click', function() {
+        clearTimeout(changeMe);// stops the execution of the function specified in setTimeout
+        console.log("setTimeout has been stopped");
+    });
+    
+
+ 
+
+
+</script>
+</html>
