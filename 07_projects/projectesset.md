@@ -5,7 +5,7 @@
 
 # Solution code 
 
-# Porject 1
+# Porject -> 01
 
 ``` javascript
 const buttons = document.querySelectorAll('.button');
@@ -34,7 +34,7 @@ buttons.forEach(function (button) {
 
 ```
 
-#Project 2
+#Project -> 02
 
 ``` Javascript
 const form = document.querySelector('form');
@@ -59,7 +59,7 @@ form.addEventListener('submit', function (event) {
 });
 ```
 
-#Project 3 
+#Project -> 03 
 
 ``` Javascript 
 const clock = document.getElementById('clock');
@@ -72,7 +72,7 @@ setInterval(function () {
 }, 1000);
 ```
 
-#Project 4
+#Project -> 04
 
 ```Javascript
 let randomNumber = parseInt(Math.random() * 100 + 1);
