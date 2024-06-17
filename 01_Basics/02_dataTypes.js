@@ -1,7 +1,7 @@
 "use strict"; //treat all JS code as newer version ES6
 
-// Primitive Data Types
-/*let name = "anirudh"; //string
+//Primitive Data Types
+let name = "anirudh"; //string
 let age = 25; //number 2 to power 53 
 let isLOggedIn = true; //boolean true or false
 let bigint = 1234567890123456789012345678901234567890n; //bigint
@@ -22,10 +22,10 @@ const heros = ["saktiman" , "thor", "spiderman"]; //array
     name:"anirudh",  // object
     age: 25
 }
-   //const myFuntion = function(){
-    //console.log("this is function")}; //function
+   const myFuntion = function(){
+    console.log("this is function")}; //function
 
-    //console.log(typeof heros ); */
+    console.log(typeof heros ); 
 
     /******************************************************************* (MOMERY)*****************************************************************************/
 
